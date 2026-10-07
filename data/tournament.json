@@ -1,0 +1,858 @@
+{
+  "name": "Pretorneo Liga 26–27",
+  "deadline": "2026-12-30",
+  "source": "Calendario Pretorneo Liga 26-27 - Club de Squash Linares.pdf",
+  "groups": [
+    {
+      "id": 1,
+      "players": [
+        "Pablo Raya",
+        "Dru",
+        "Chechu",
+        "Raúl Navajas",
+        "Roberto Chaves",
+        "Antonio Padilla",
+        "David Escudero",
+        "Genaro"
+      ],
+      "rounds": [
+        {
+          "number": 1,
+          "week": "2026-10-19",
+          "rest": null,
+          "matches": [
+            {
+              "id": "g1-r1-m1",
+              "players": [
+                "Pablo Raya",
+                "Dru"
+              ]
+            },
+            {
+              "id": "g1-r1-m2",
+              "players": [
+                "Chechu",
+                "Raúl Navajas"
+              ]
+            },
+            {
+              "id": "g1-r1-m3",
+              "players": [
+                "Roberto Chaves",
+                "Antonio Padilla"
+              ]
+            },
+            {
+              "id": "g1-r1-m4",
+              "players": [
+                "David Escudero",
+                "Genaro"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "week": "2026-10-26",
+          "rest": null,
+          "matches": [
+            {
+              "id": "g1-r2-m1",
+              "players": [
+                "Dru",
+                "Genaro"
+              ]
+            },
+            {
+              "id": "g1-r2-m2",
+              "players": [
+                "Antonio Padilla",
+                "David Escudero"
+              ]
+            },
+            {
+              "id": "g1-r2-m3",
+              "players": [
+                "Raúl Navajas",
+                "Roberto Chaves"
+              ]
+            },
+            {
+              "id": "g1-r2-m4",
+              "players": [
+                "Pablo Raya",
+                "Chechu"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "week": "2026-11-02",
+          "rest": null,
+          "matches": [
+            {
+              "id": "g1-r3-m1",
+              "players": [
+                "Chechu",
+                "Dru"
+              ]
+            },
+            {
+              "id": "g1-r3-m2",
+              "players": [
+                "Roberto Chaves",
+                "Pablo Raya"
+              ]
+            },
+            {
+              "id": "g1-r3-m3",
+              "players": [
+                "David Escudero",
+                "Raúl Navajas"
+              ]
+            },
+            {
+              "id": "g1-r3-m4",
+              "players": [
+                "Genaro",
+                "Antonio Padilla"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "week": "2026-11-09",
+          "rest": null,
+          "matches": [
+            {
+              "id": "g1-r4-m1",
+              "players": [
+                "Dru",
+                "Antonio Padilla"
+              ]
+            },
+            {
+              "id": "g1-r4-m2",
+              "players": [
+                "Raúl Navajas",
+                "Genaro"
+              ]
+            },
+            {
+              "id": "g1-r4-m3",
+              "players": [
+                "Pablo Raya",
+                "David Escudero"
+              ]
+            },
+            {
+              "id": "g1-r4-m4",
+              "players": [
+                "Chechu",
+                "Roberto Chaves"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "week": "2026-11-16",
+          "rest": null,
+          "matches": [
+            {
+              "id": "g1-r5-m1",
+              "players": [
+                "Roberto Chaves",
+                "Dru"
+              ]
+            },
+            {
+              "id": "g1-r5-m2",
+              "players": [
+                "David Escudero",
+                "Chechu"
+              ]
+            },
+            {
+              "id": "g1-r5-m3",
+              "players": [
+                "Genaro",
+                "Pablo Raya"
+              ]
+            },
+            {
+              "id": "g1-r5-m4",
+              "players": [
+                "Antonio Padilla",
+                "Raúl Navajas"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "week": "2026-11-23",
+          "rest": null,
+          "matches": [
+            {
+              "id": "g1-r6-m1",
+              "players": [
+                "Dru",
+                "Raúl Navajas"
+              ]
+            },
+            {
+              "id": "g1-r6-m2",
+              "players": [
+                "Pablo Raya",
+                "Antonio Padilla"
+              ]
+            },
+            {
+              "id": "g1-r6-m3",
+              "players": [
+                "Chechu",
+                "Genaro"
+              ]
+            },
+            {
+              "id": "g1-r6-m4",
+              "players": [
+                "Roberto Chaves",
+                "David Escudero"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "week": "2026-11-30",
+          "rest": null,
+          "matches": [
+            {
+              "id": "g1-r7-m1",
+              "players": [
+                "David Escudero",
+                "Dru"
+              ]
+            },
+            {
+              "id": "g1-r7-m2",
+              "players": [
+                "Genaro",
+                "Roberto Chaves"
+              ]
+            },
+            {
+              "id": "g1-r7-m3",
+              "players": [
+                "Antonio Padilla",
+                "Chechu"
+              ]
+            },
+            {
+              "id": "g1-r7-m4",
+              "players": [
+                "Raúl Navajas",
+                "Pablo Raya"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "players": [
+        "Nani",
+        "Fernando García",
+        "Pakito",
+        "Fran Garrido",
+        "Fran Godino",
+        "Antonio Ruiz",
+        "Pedro José Gascón",
+        "Miguel Sánchez"
+      ],
+      "rounds": [
+        {
+          "number": 1,
+          "week": "2026-10-19",
+          "rest": null,
+          "matches": [
+            {
+              "id": "g2-r1-m1",
+              "players": [
+                "Nani",
+                "Fernando García"
+              ]
+            },
+            {
+              "id": "g2-r1-m2",
+              "players": [
+                "Pakito",
+                "Fran Garrido"
+              ]
+            },
+            {
+              "id": "g2-r1-m3",
+              "players": [
+                "Fran Godino",
+                "Antonio Ruiz"
+              ]
+            },
+            {
+              "id": "g2-r1-m4",
+              "players": [
+                "Pedro José Gascón",
+                "Miguel Sánchez"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "week": "2026-10-26",
+          "rest": null,
+          "matches": [
+            {
+              "id": "g2-r2-m1",
+              "players": [
+                "Fernando García",
+                "Miguel Sánchez"
+              ]
+            },
+            {
+              "id": "g2-r2-m2",
+              "players": [
+                "Antonio Ruiz",
+                "Pedro José Gascón"
+              ]
+            },
+            {
+              "id": "g2-r2-m3",
+              "players": [
+                "Fran Garrido",
+                "Fran Godino"
+              ]
+            },
+            {
+              "id": "g2-r2-m4",
+              "players": [
+                "Nani",
+                "Pakito"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "week": "2026-11-02",
+          "rest": null,
+          "matches": [
+            {
+              "id": "g2-r3-m1",
+              "players": [
+                "Pakito",
+                "Fernando García"
+              ]
+            },
+            {
+              "id": "g2-r3-m2",
+              "players": [
+                "Fran Godino",
+                "Nani"
+              ]
+            },
+            {
+              "id": "g2-r3-m3",
+              "players": [
+                "Pedro José Gascón",
+                "Fran Garrido"
+              ]
+            },
+            {
+              "id": "g2-r3-m4",
+              "players": [
+                "Miguel Sánchez",
+                "Antonio Ruiz"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "week": "2026-11-09",
+          "rest": null,
+          "matches": [
+            {
+              "id": "g2-r4-m1",
+              "players": [
+                "Fernando García",
+                "Antonio Ruiz"
+              ]
+            },
+            {
+              "id": "g2-r4-m2",
+              "players": [
+                "Fran Garrido",
+                "Miguel Sánchez"
+              ]
+            },
+            {
+              "id": "g2-r4-m3",
+              "players": [
+                "Nani",
+                "Pedro José Gascón"
+              ]
+            },
+            {
+              "id": "g2-r4-m4",
+              "players": [
+                "Pakito",
+                "Fran Godino"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "week": "2026-11-16",
+          "rest": null,
+          "matches": [
+            {
+              "id": "g2-r5-m1",
+              "players": [
+                "Fran Godino",
+                "Fernando García"
+              ]
+            },
+            {
+              "id": "g2-r5-m2",
+              "players": [
+                "Pedro José Gascón",
+                "Pakito"
+              ]
+            },
+            {
+              "id": "g2-r5-m3",
+              "players": [
+                "Miguel Sánchez",
+                "Nani"
+              ]
+            },
+            {
+              "id": "g2-r5-m4",
+              "players": [
+                "Antonio Ruiz",
+                "Fran Garrido"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "week": "2026-11-23",
+          "rest": null,
+          "matches": [
+            {
+              "id": "g2-r6-m1",
+              "players": [
+                "Fernando García",
+                "Fran Garrido"
+              ]
+            },
+            {
+              "id": "g2-r6-m2",
+              "players": [
+                "Nani",
+                "Antonio Ruiz"
+              ]
+            },
+            {
+              "id": "g2-r6-m3",
+              "players": [
+                "Pakito",
+                "Miguel Sánchez"
+              ]
+            },
+            {
+              "id": "g2-r6-m4",
+              "players": [
+                "Fran Godino",
+                "Pedro José Gascón"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "week": "2026-11-30",
+          "rest": null,
+          "matches": [
+            {
+              "id": "g2-r7-m1",
+              "players": [
+                "Pedro José Gascón",
+                "Fernando García"
+              ]
+            },
+            {
+              "id": "g2-r7-m2",
+              "players": [
+                "Miguel Sánchez",
+                "Fran Godino"
+              ]
+            },
+            {
+              "id": "g2-r7-m3",
+              "players": [
+                "Antonio Ruiz",
+                "Pakito"
+              ]
+            },
+            {
+              "id": "g2-r7-m4",
+              "players": [
+                "Fran Garrido",
+                "Nani"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "players": [
+        "Álvaro",
+        "David Gálvez",
+        "Fernando Moreno",
+        "José Soriano",
+        "Manuel R.",
+        "Manuel Reyes",
+        "Rafa Mesa",
+        "Alberto Peralta Casado",
+        "Miguel Delgado"
+      ],
+      "rounds": [
+        {
+          "number": 1,
+          "week": "2026-10-19",
+          "rest": "Miguel Delgado",
+          "matches": [
+            {
+              "id": "g3-r1-m1",
+              "players": [
+                "Álvaro",
+                "David Gálvez"
+              ]
+            },
+            {
+              "id": "g3-r1-m2",
+              "players": [
+                "Fernando Moreno",
+                "José Soriano"
+              ]
+            },
+            {
+              "id": "g3-r1-m3",
+              "players": [
+                "Manuel R.",
+                "Manuel Reyes"
+              ]
+            },
+            {
+              "id": "g3-r1-m4",
+              "players": [
+                "Rafa Mesa",
+                "Alberto Peralta Casado"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "week": "2026-10-26",
+          "rest": "Manuel R.",
+          "matches": [
+            {
+              "id": "g3-r2-m1",
+              "players": [
+                "Miguel Delgado",
+                "David Gálvez"
+              ]
+            },
+            {
+              "id": "g3-r2-m2",
+              "players": [
+                "Alberto Peralta Casado",
+                "Manuel Reyes"
+              ]
+            },
+            {
+              "id": "g3-r2-m3",
+              "players": [
+                "José Soriano",
+                "Rafa Mesa"
+              ]
+            },
+            {
+              "id": "g3-r2-m4",
+              "players": [
+                "Álvaro",
+                "Fernando Moreno"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "week": "2026-11-02",
+          "rest": "Manuel Reyes",
+          "matches": [
+            {
+              "id": "g3-r3-m1",
+              "players": [
+                "Fernando Moreno",
+                "David Gálvez"
+              ]
+            },
+            {
+              "id": "g3-r3-m2",
+              "players": [
+                "Manuel R.",
+                "Miguel Delgado"
+              ]
+            },
+            {
+              "id": "g3-r3-m3",
+              "players": [
+                "Rafa Mesa",
+                "Álvaro"
+              ]
+            },
+            {
+              "id": "g3-r3-m4",
+              "players": [
+                "Alberto Peralta Casado",
+                "José Soriano"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "week": "2026-11-09",
+          "rest": "Álvaro",
+          "matches": [
+            {
+              "id": "g3-r4-m1",
+              "players": [
+                "David Gálvez",
+                "José Soriano"
+              ]
+            },
+            {
+              "id": "g3-r4-m2",
+              "players": [
+                "Manuel Reyes",
+                "Miguel Delgado"
+              ]
+            },
+            {
+              "id": "g3-r4-m3",
+              "players": [
+                "Manuel R.",
+                "Rafa Mesa"
+              ]
+            },
+            {
+              "id": "g3-r4-m4",
+              "players": [
+                "Fernando Moreno",
+                "Alberto Peralta Casado"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "week": "2026-11-16",
+          "rest": "Manuel R.",
+          "matches": [
+            {
+              "id": "g3-r5-m1",
+              "players": [
+                "Alberto Peralta Casado",
+                "David Gálvez"
+              ]
+            },
+            {
+              "id": "g3-r5-m2",
+              "players": [
+                "José Soriano",
+                "Álvaro"
+              ]
+            },
+            {
+              "id": "g3-r5-m3",
+              "players": [
+                "Rafa Mesa",
+                "Manuel Reyes"
+              ]
+            },
+            {
+              "id": "g3-r5-m4",
+              "players": [
+                "Miguel Delgado",
+                "Fernando Moreno"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "week": "2026-11-23",
+          "rest": "José Soriano",
+          "matches": [
+            {
+              "id": "g3-r6-m1",
+              "players": [
+                "David Gálvez",
+                "Manuel R."
+              ]
+            },
+            {
+              "id": "g3-r6-m2",
+              "players": [
+                "Álvaro",
+                "Alberto Peralta Casado"
+              ]
+            },
+            {
+              "id": "g3-r6-m3",
+              "players": [
+                "Manuel Reyes",
+                "Fernando Moreno"
+              ]
+            },
+            {
+              "id": "g3-r6-m4",
+              "players": [
+                "Miguel Delgado",
+                "Rafa Mesa"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "week": "2026-11-30",
+          "rest": "Fernando Moreno",
+          "matches": [
+            {
+              "id": "g3-r7-m1",
+              "players": [
+                "Rafa Mesa",
+                "David Gálvez"
+              ]
+            },
+            {
+              "id": "g3-r7-m2",
+              "players": [
+                "Alberto Peralta Casado",
+                "Manuel R."
+              ]
+            },
+            {
+              "id": "g3-r7-m3",
+              "players": [
+                "José Soriano",
+                "Miguel Delgado"
+              ]
+            },
+            {
+              "id": "g3-r7-m4",
+              "players": [
+                "Manuel Reyes",
+                "Álvaro"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "week": "2026-12-07",
+          "rest": "Alberto Peralta Casado",
+          "matches": [
+            {
+              "id": "g3-r8-m1",
+              "players": [
+                "David Gálvez",
+                "Manuel Reyes"
+              ]
+            },
+            {
+              "id": "g3-r8-m2",
+              "players": [
+                "Fernando Moreno",
+                "Rafa Mesa"
+              ]
+            },
+            {
+              "id": "g3-r8-m3",
+              "players": [
+                "Manuel R.",
+                "José Soriano"
+              ]
+            },
+            {
+              "id": "g3-r8-m4",
+              "players": [
+                "Miguel Delgado",
+                "Álvaro"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "week": "2026-12-14",
+          "rest": "Rafa Mesa",
+          "matches": [
+            {
+              "id": "g3-r9-m1",
+              "players": [
+                "Álvaro",
+                "Manuel R."
+              ]
+            },
+            {
+              "id": "g3-r9-m2",
+              "players": [
+                "Fernando Moreno",
+                "Manuel Reyes"
+              ]
+            },
+            {
+              "id": "g3-r9-m3",
+              "players": [
+                "Alberto Peralta Casado",
+                "Miguel Delgado"
+              ]
+            },
+            {
+              "id": "g3-r9-m4",
+              "players": [
+                "José Soriano",
+                "David Gálvez"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
