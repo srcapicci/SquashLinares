@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Install from "./components/install";
 export const metadata: Metadata = {
-  title: "Squash Linares · Liga 26–27",
+  title: "Club de Squash Linares",
   description: "Grupos, jornadas y partidos del Club de Squash Linares",
 };
 export default function Layout({
@@ -9,7 +10,10 @@ export default function Layout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body>
+        <Install />
+        {children}
+      </body>
     </html>
   );
 }

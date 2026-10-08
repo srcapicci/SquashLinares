@@ -304,3 +304,253 @@ a:focus-visible {
     padding: 16px;
   }
 }
+
+.club-shell > footer {
+  margin-top: 45px;
+}
+.nav-links,
+.actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.nav-links a,
+a {
+  color: var(--green);
+}
+.nav-links a {
+  font-size: 13px;
+  text-decoration: none;
+}
+.nav-links button {
+  padding: 8px 14px;
+}
+.button {
+  display: inline-block;
+  padding: 14px 22px;
+  background: #e9eedf;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+.primary {
+  background: var(--green);
+  color: white;
+}
+.compact {
+  padding: 40px 0 25px;
+}
+.compact h1 {
+  font-size: clamp(30px, 5vw, 52px);
+  letter-spacing: -2px;
+}
+.panel {
+  background: white;
+  border: 1px solid #e3e6dd;
+  padding: 26px;
+  border-radius: 18px;
+  margin-bottom: 20px;
+}
+.panel p {
+  color: #607167;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.auth-panel {
+  max-width: 580px;
+  margin: 45px auto;
+}
+.auth-panel h1 {
+  font-size: 40px;
+  letter-spacing: -1.5px;
+}
+.auth-panel form,
+details form {
+  display: grid;
+  gap: 16px;
+}
+input {
+  font: inherit;
+  min-width: 0;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d9dfd7;
+  border-radius: 8px;
+  background: white;
+  color: var(--ink);
+}
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--green);
+}
+form {
+  display: grid;
+  gap: 15px;
+}
+.check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+.error {
+  background: #fff0ec;
+  color: #9b3527 !important;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 14px;
+}
+.success {
+  background: #eaf3df;
+  color: #30552b;
+  border-radius: 10px;
+  padding: 15px;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+.admin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  align-items: start;
+}
+.tournament-card {
+  display: block;
+  text-decoration: none;
+  color: var(--ink);
+}
+.tournament-card h3 {
+  font-size: 23px;
+  margin: 18px 0 10px;
+}
+.admin-accounts {
+  margin-top: 30px;
+}
+.inline-form {
+  display: flex;
+  gap: 14px;
+  align-items: end;
+  flex-wrap: wrap;
+}
+.inline-form label {
+  flex: 1;
+  min-width: 140px;
+}
+.group-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0;
+}
+.entry {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 1fr;
+  gap: 15px;
+  align-items: center;
+  padding: 18px 0;
+  border-top: 1px solid #e3e6dd;
+}
+.entry small {
+  display: block;
+  color: #607167;
+  margin-top: 5px;
+  overflow-wrap: anywhere;
+}
+.share-box {
+  margin: 15px 0;
+  background: #edf3e5;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  gap: 14px;
+  align-items: end;
+}
+.share-box label {
+  flex: 1;
+  min-width: 0;
+}
+.back-link {
+  display: block;
+  margin-top: 25px;
+  text-decoration: none;
+  font-size: 13px;
+}
+.result-form {
+  padding: 16px;
+  border-top: 1px solid #e3e6dd;
+}
+.result-form p {
+  font-size: 12px;
+}
+.result-form form {
+  margin-top: 12px;
+}
+.tournament-picker {
+  max-width: 500px;
+  margin-bottom: 24px;
+}
+summary {
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--green);
+  padding: 10px 0;
+}
+details ul {
+  font-size: 14px;
+  line-height: 1.8;
+}
+.notice .actions {
+  justify-content: space-between;
+}
+input:focus-visible {
+  outline: 3px solid #96b83a;
+  outline-offset: 2px;
+}
+@media (max-width: 700px) {
+  .feature-grid,
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+  .club-shell nav {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    gap: 12px;
+  }
+  .panel {
+    padding: 20px;
+  }
+  .entry {
+    grid-template-columns: 1fr 1fr;
+  }
+  .entry > div {
+    grid-column: 1/-1;
+  }
+  .share-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .share-box input {
+    font-size: 12px;
+  }
+  .inline-form {
+    align-items: stretch;
+  }
+  .inline-form label {
+    width: 100%;
+  }
+  .feature-grid {
+    gap: 0;
+  }
+}
