@@ -4,13 +4,17 @@
 
 Solo necesitas Docker Desktop abierto y una copia del código en tu Mac. No necesitas instalar Node.js, npm ni PostgreSQL en el ordenador.
 
-Puedes descomprimir la copia ZIP facilitada en el chat y abrir Terminal en esa carpeta. El ZIP es una copia para revisión y no contiene el historial Git; conserva cualquier carpeta donde ya hayas hecho cambios. Si ya tienes el repositorio clonado, aplica el parche de esta revisión a esa copia en lugar de sobrescribir tus archivos.
+Puedes descargar el proyecto desde GitHub con **Code → Download ZIP**, descomprimirlo y abrir Terminal en esa carpeta. El ZIP no contiene el historial Git; conserva cualquier carpeta donde ya hayas hecho cambios. Si tienes el repositorio clonado, guarda tu trabajo local antes de traer cambios con `git pull --ff-only`.
+
+La infraestructura se mantiene en `deploy/`: un Compose principal incluye los componentes de aplicación, base de datos y correo. Se necesita Docker Compose 2.20.3 o posterior (actualiza Docker Desktop si es necesario). El Compose de la raíz delega en ese principal.
 
 Desde la carpeta que contiene `compose.yaml`:
 
 ```sh
 docker compose up --build -d --wait
 ```
+
+También puedes arrancar desde la raíz con `docker compose -f deploy/compose.yaml up --build -d --wait`. Ambos comandos gestionan el mismo proyecto y los mismos datos.
 
 La primera vez descarga las imágenes y dependencias; las siguientes reutilizan lo preparado. Compose espera a que la aplicación esté saludable. Si el puerto 3000 está ocupado, detén el proceso que lo utiliza antes de arrancar.
 
@@ -102,8 +106,8 @@ Criterio de numeración:
 
 | Cambio                                              | Ejemplo desde 0.2.0 |
 | --------------------------------------------------- | ------------------- |
-| Correcciones sin cambiar el funcionamiento esperado | 0.1.1               |
-| Nuevas funciones o mejoras de alcance               | 0.2.0               |
+| Correcciones sin cambiar el funcionamiento esperado | 0.2.1               |
+| Nuevas funciones o mejoras de alcance               | 0.3.0               |
 | Primera versión estable acordada para uso real      | 1.0.0               |
 
 No ejecutes este ejemplo hasta aprobar la versión correspondiente:
@@ -130,7 +134,7 @@ Cuando la versión esté aprobada:
 1. Conectar el repositorio al alojamiento y establecer Node.js 24, instalación `npm ci`, compilación `npm run build` y arranque `npm start`.
 2. Crear PostgreSQL persistente y definir DATABASE_URL en los secretos del servicio. No utilizar las credenciales de ejemplo de Docker.
 3. Configurar APP_URL con el dominio público HTTPS y las variables del proveedor SMTP. Mailpit se usa solo en desarrollo.
-4. Aplicar el esquema con `node scripts/db-setup.mjs`. En producción se ejecuta directamente, porque `npm run db:setup` busca el archivo local `.env.local` que no se sube al servidor.
+4. Aplicar el esquema con `node scripts/db-setup.mjs`. En producción se ejecuta directamente, usando las variables del servidor; `.env.local` es opcional y no se sube al servidor.
 5. Crear la primera cuenta administradora con `node scripts/create-admin.mjs`, usando una terminal interactiva o variables suministradas de forma segura. No guardar contraseñas en comandos versionados.
 6. Probar acceso, inscripción, calendario, resultados y correo real antes de compartir enlaces. Acordar las copias de seguridad de PostgreSQL y mantener los despliegues sujetos a aprobación.
 

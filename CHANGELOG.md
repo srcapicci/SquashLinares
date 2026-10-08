@@ -4,7 +4,16 @@ Las novedades pendientes se anotan en **Sin publicar**. Solo se convierten en un
 
 ## Sin publicar
 
-Sin cambios pendientes.
+### Correcciones
+
+- La guía de Mac utiliza la descarga desde GitHub y corrige los ejemplos de próximas versiones.
+
+### Mejoras
+
+- Infraestructura separada en `deploy/`, incluidos Dockerfile y scripts de arranque.
+- Compose principal con componentes incluidos de aplicación, PostgreSQL y correo, conectados por la red del mismo proyecto.
+- Punto de entrada en la raíz compatible con el arranque anterior; se conservan el nombre del proyecto y los volúmenes de datos.
+- Guía de estructura, comunicación interna y comandos de operación del stack.
 
 ## 0.2.0 — 2026-10-08
 

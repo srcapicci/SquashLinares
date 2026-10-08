@@ -1,0 +1,7 @@
+name: squashlinares
+
+# Included components form one project and share its default Docker network.
+include:
+  - stacks/app/compose.yaml
+  - stacks/database/compose.yaml
+  - stacks/mail/compose.yaml

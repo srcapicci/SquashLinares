@@ -8,4 +8,4 @@ RUN --mount=type=secret,id=trusted_ca \
     npm ci --no-fund && sha256sum package.json package-lock.json | sha256sum > node_modules/.dependency-fingerprint
 COPY . .
 EXPOSE 3000
-CMD ["sh", "scripts/docker-start.sh"]
+CMD ["sh", "deploy/scripts/docker-start.sh"]

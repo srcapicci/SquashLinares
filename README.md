@@ -10,7 +10,7 @@ La versión de desarrollo actual está en [VERSION](VERSION). El [CHANGELOG](CHA
 
 ## Tecnología y alcance
 
-Next.js 16, React 19 y TypeScript para interfaz y API; PostgreSQL 17 para persistencia. Docker Compose ejecuta PostgreSQL y Mailpit (buzón de pruebas); Node.js 24 ejecuta la aplicación. El lockfile fija las dependencias.
+Next.js 16, React 19 y TypeScript para interfaz y API; PostgreSQL 17 para persistencia. Docker Compose ejecuta un único proyecto con la aplicación sobre Node.js 24, PostgreSQL y Mailpit (buzón de pruebas). El lockfile fija las dependencias.
 
 Cada torneo tiene fecha orientativa de inicio, intervalo de jornadas, límite de recuperación y juegos para ganar. El formato implementado es todos contra todos a una vuelta. La puntuación de clasificación y los desempates siguen pendientes de confirmación y no se calculan.
 
@@ -26,7 +26,9 @@ Abre `http://localhost:3000` en tu Mac y pulsa **Configurar mi club** para crear
 
 El código está montado en el contenedor y se actualiza al editar. `docker compose stop` detiene los servicios y conserva los datos; `docker compose up -d --wait` los reinicia. La configuración Compose es de desarrollo, con acceso local por defecto. FIRST_ADMIN_SETUP se habilita únicamente en esa configuración; en un despliegue público debe permanecer deshabilitado y el primer administrador se crea por el procedimiento controlado de la terminal.
 
-El Dockerfile permite aportar opcionalmente una CA de confianza mediante el secret de construcción `trusted_ca` para redes con proxy HTTPS. Esto mantiene la verificación TLS; no es necesario en una red normal del Mac. La configuración específica del proxy del entorno de Codex se guarda fuera del repositorio.
+La infraestructura está separada en [`deploy/`](deploy/README.md). Su Compose principal incluye los componentes de app, base de datos y correo en una red compartida. El `compose.yaml` de la raíz conserva el comando de arranque habitual y delega en esa carpeta. Requiere Docker Compose 2.20.3 o posterior, disponible en Docker Desktop actualizado.
+
+El Dockerfile de `deploy/stacks/app/` permite aportar opcionalmente una CA de confianza mediante el secret de construcción `trusted_ca` para redes con proxy HTTPS. Esto mantiene la verificación TLS; no es necesario en una red normal del Mac. La configuración específica del proxy del entorno de Codex se guarda fuera del repositorio.
 
 ## Arranque alternativo con Node.js local
 
@@ -43,7 +45,7 @@ npm run dev
 
 `admin:create` solicita nombre, correo y contraseña con entrada oculta en una terminal interactiva. No hay cuentas ni contraseñas administrativas predeterminadas. El arranque Docker permite hacerlo directamente desde la pantalla de primer acceso; este comando es una alternativa. También acepta ADMIN_EMAIL, ADMIN_NAME y ADMIN_PASSWORD mediante variables inyectadas de forma segura; no las escribas en el repositorio ni en comandos guardados. La contraseña se almacena con scrypt y sal aleatoria. Los demás administradores se crean desde el panel de administración; todos gestionan los torneos del club. No hay recuperación automática de contraseñas todavía.
 
-En el entorno de Codex, `bash scripts/cloud-install.sh` construye y arranca los tres servicios. Si el entorno aporta una CA de proxy, genera un override externo al repositorio para que Docker confíe en ella durante instalación y ejecución. No crea cuentas automáticamente; el primer administrador se configura desde el navegador con el modo local de Compose.
+En el entorno de Codex, `bash deploy/scripts/cloud-install.sh` construye y arranca los tres servicios. Si el entorno aporta una CA de proxy, genera un override externo al repositorio para que Docker confíe en ella durante instalación y ejecución. No crea cuentas automáticamente; el primer administrador se configura desde el navegador con el modo local de Compose.
 
 `APP_URL` debe coincidir con el origen desde el que se abre la app. En desarrollo es `http://localhost:3000`. Las solicitudes de escritura requieren ese Origin; una URL diferente exige ajustar APP_URL y reiniciar. Los enlaces y correos se generan con ese origen. La caducidad se guarda como un instante UTC y se comprueba en el servidor; las fechas de jornadas son fechas de calendario. Los formularios datetime-local utilizan la hora del dispositivo y los avisos de inscripción muestran la hora de Madrid.
 
