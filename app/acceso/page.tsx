@@ -1,12 +1,14 @@
 "use client";
 import { useState } from "react";
 import Shell from "../components/shell";
+import FirstRun from "../components/first-run";
 import { api, type User } from "../../lib/client";
 export default function Login() {
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
   return (
     <Shell>
+      <FirstRun />
       <section className="auth-panel panel">
         <span className="eyebrow">BIENVENIDO A LA PISTA</span>
         <h1>Tu cuenta.</h1>

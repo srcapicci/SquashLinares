@@ -80,6 +80,42 @@ export async function handleClub(request: NextRequest, path: string[]) {
       method = request.method;
     if (method === "POST") checkOrigin(request);
     const body = method === "POST" ? await request.json() : null;
+    if (key === "setup" && method === "GET") {
+      if (process.env.FIRST_ADMIN_SETUP !== "true")
+        return reply({ available: false });
+      const { rows } = await database().query(
+        "SELECT EXISTS(SELECT 1 FROM app_users WHERE role='admin') AS configured",
+      );
+      return reply({ available: !rows[0].configured });
+    }
+    if (key === "setup" && method === "POST") {
+      if (process.env.FIRST_ADMIN_SETUP !== "true")
+        throw new HttpError(403, "La configuración inicial no está habilitada");
+      const input = account.parse(body);
+      await rateLimit("first-admin-setup", 10);
+      const user = await transaction(async (c) => {
+        await c.query(
+          "SELECT pg_advisory_xact_lock(hashtext('club-first-admin'))",
+        );
+        const { rows } = await c.query(
+          "SELECT EXISTS(SELECT 1 FROM app_users WHERE role='admin') AS configured",
+        );
+        if (rows[0].configured)
+          throw new HttpError(
+            409,
+            "El club ya tiene administrador. Inicia sesión.",
+          );
+        return (
+          await c.query(
+            "INSERT INTO app_users(name,email,password_hash,role) VALUES($1,$2,$3,'admin') RETURNING id,name,email,role",
+            [input.name, input.email, await hashPassword(input.password)],
+          )
+        ).rows[0];
+      });
+      const response = reply({ user }, 201);
+      await openSession(response, user.id, request);
+      return response;
+    }
     if (key === "auth/login" && method === "POST") {
       const input = z
         .object({ email, password: z.string().max(128) })

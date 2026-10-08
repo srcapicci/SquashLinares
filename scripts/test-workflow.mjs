@@ -4,8 +4,13 @@ import pg from "pg";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { mkdir } from "node:fs/promises";
+import { join, resolve } from "node:path";
 import { hashPassword, tokenHash } from "../lib/password.mjs";
 const base = process.env.TEST_BASE_URL || "http://localhost:3000";
+const mailpitUrl = process.env.MAILPIT_URL || "http://127.0.0.1:8025";
+const artifactsDir = resolve(
+  process.env.TEST_ARTIFACTS_DIR || "test-artifacts",
+);
 const run = randomUUID().slice(0, 8),
   password = "Test-" + randomUUID(),
   users = [],
@@ -38,7 +43,7 @@ try {
   const adminEmail = `admin-${run}@example.test`;
   await promisify(execFile)(
     process.execPath,
-    ["--env-file=.env.local", "scripts/create-admin.mjs"],
+    ["--env-file-if-exists=.env.local", "scripts/create-admin.mjs"],
     {
       env: {
         ...process.env,
@@ -367,9 +372,7 @@ try {
       (n) => n.id === notices[0].id,
     ).read_at,
   );
-  const mail = await (
-    await fetch("http://127.0.0.1:8025/api/v1/messages")
-  ).json();
+  const mail = await (await fetch(mailpitUrl + "/api/v1/messages")).json();
   assert.ok(
     mail.messages.some(
       (m) => m.Subject === "Tu grupo y calendario · " + t.name,
@@ -394,9 +397,9 @@ try {
         () => document.documentElement.scrollWidth <= window.innerWidth,
       ),
     );
-    await mkdir("/workspace/artifacts", { recursive: true });
+    await mkdir(artifactsDir, { recursive: true });
     await page.screenshot({
-      path: "/workspace/artifacts/squash-admin-mobile.png",
+      path: join(artifactsDir, "squash-admin-mobile.png"),
       fullPage: true,
     });
     await context.close();
@@ -434,7 +437,7 @@ try {
       ),
     );
     await pp.screenshot({
-      path: "/workspace/artifacts/squash-player-mobile.png",
+      path: join(artifactsDir, "squash-player-mobile.png"),
       fullPage: true,
     });
     await pc.close();

@@ -1,7 +1,9 @@
 import Shell from "./components/shell";
+import FirstRun from "./components/first-run";
 export default function Home() {
   return (
     <Shell>
+      <FirstRun />
       <header>
         <span className="eyebrow">CLUB DE SQUASH LINARES</span>
         <h1>

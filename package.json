@@ -1,6 +1,6 @@
 {
   "name": "squash-linares",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev --webpack --hostname 0.0.0.0",
@@ -8,10 +8,11 @@
     "start": "next start --hostname 0.0.0.0",
     "typecheck": "tsc --noEmit",
     "test": "node --test tests/*.test.mjs",
-    "db:setup": "node --env-file=.env.local scripts/db-setup.mjs",
-    "admin:create": "node --env-file=.env.local scripts/create-admin.mjs",
-    "test:workflow": "node --env-file=.env.local scripts/test-workflow.mjs",
-    "test:mobile": "node --env-file=.env.local scripts/test-workflow.mjs --browser"
+    "db:setup": "node --env-file-if-exists=.env.local scripts/db-setup.mjs",
+    "admin:create": "node --env-file-if-exists=.env.local scripts/create-admin.mjs",
+    "test:workflow": "node --env-file-if-exists=.env.local scripts/test-workflow.mjs",
+    "test:mobile": "node --env-file-if-exists=.env.local scripts/test-workflow.mjs --browser",
+    "test:first-run": "node --env-file-if-exists=.env.local scripts/test-first-run.mjs"
   },
   "dependencies": {
     "next": "^16.4.0",

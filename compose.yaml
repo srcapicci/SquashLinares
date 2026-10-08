@@ -1,4 +1,46 @@
+name: squashlinares
 services:
+  app:
+    build:
+      context: .
+      target: development
+    init: true
+    environment:
+      DATABASE_URL: postgresql://squash:squash_dev@db:5432/squash
+      APP_URL: ${APP_URL:-http://localhost:3000}
+      FIRST_ADMIN_SETUP: "true"
+      MAILPIT_URL: http://mail:8025
+      SMTP_HOST: mail
+      SMTP_PORT: "1025"
+      SMTP_SECURE: "false"
+      SMTP_USER: ""
+      SMTP_PASSWORD: ""
+      SMTP_FROM: Club de Squash Linares <club@localhost>
+      NEXT_TELEMETRY_DISABLED: "1"
+      WATCHPACK_POLLING: "true"
+    ports:
+      - "${APP_BIND_IP:-127.0.0.1}:3000:3000"
+    volumes:
+      - .:/app
+      - app_dependencies:/app/node_modules
+      - app_next:/app/.next
+    depends_on:
+      db:
+        condition: service_healthy
+      mail:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:3000/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
+      interval: 5s
+      timeout: 5s
+      start_period: 60s
+      retries: 20
   db:
     image: postgres:17
     environment:
@@ -21,3 +63,5 @@ services:
       - "127.0.0.1:8025:8025"
 volumes:
   postgres_data:
+  app_dependencies:
+  app_next:
